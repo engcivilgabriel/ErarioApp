@@ -471,10 +471,6 @@ elif paginaSelecionada == 'Análise Exploratória':
     groupEconomiaAno = group_ano['economia atual'].agg('sum')
     groupEconomiaAnual = groupEconomiaAno
 
-    import locale
-
-    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
-
     data_matrix_ano = [['Ano', 'Processos', 'Preços Novos', 'Economia Atual'],
                        [df['ano finalizacao'].sort_values().unique()[0],
                         df.groupby('ano finalizacao').processo.nunique().iloc[0],
@@ -497,10 +493,6 @@ elif paginaSelecionada == 'Análise Exploratória':
     dataPreçoNovo1 = grouped['preço novo'].agg('sum')
     dataEconomiaAtual1 = grouped['economia atual'].agg('sum')
     dataEconomiaAtualFormat1 = dataEconomiaAtual1
-
-    #Formatação moeda
-    import locale
-    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
     #Confecção tabela
     data_matrix1 = [['Região', 'Processos', 'Preços Novos', 'Economia Atual'],
@@ -525,10 +517,7 @@ elif paginaSelecionada == 'Análise Exploratória':
     dataEconomiaAtual6 = grouped6['economia atual'].agg('sum')
     dataEconomiaAtualFormat6 = dataEconomiaAtual6
 
-    import locale
     import plotly.figure_factory as ff
-
-    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
     data_matrix6 = [['UF', 'Processos', 'Preços Novos', 'Economia Atual'],
                     [df.uf.sort_values().unique()[0], df.groupby('uf').processo.nunique()[0],
@@ -618,11 +607,6 @@ elif paginaSelecionada == 'Análise Exploratória':
     dataEconomiaAtual3 = grouped3['economia atual'].agg('sum')
     dataEconomiaAtualFormat3 = dataEconomiaAtual3
 
-    #Formatação moeda
-    import locale
-
-    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
-
     #Confecção tabela
     data_matrix3 = [['Tipo', 'Processos', 'Preços Novos', 'Economia Atual'],
                     [df.tipo.sort_values().unique()[0], df.groupby('tipo').processo.nunique()[0],
@@ -663,11 +647,6 @@ elif paginaSelecionada == 'Análise Exploratória':
     dataPreçoNovo = grouped2['preço novo'].agg('sum')
     dataEconomiaAtual = grouped2['economia atual'].agg('sum')
     dataEconomiaAtualFormat = dataEconomiaAtual
-
-    #Formatação moeda
-    import locale
-
-    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
     #Confecção tabela
     data_matrix = [['Analista', 'Processos', 'Preços Novos', 'Economia Atual'],
