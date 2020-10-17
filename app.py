@@ -473,7 +473,7 @@ elif paginaSelecionada == 'Análise Exploratória':
 
     import locale
 
-    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
     data_matrix_ano = [['Ano', 'Processos', 'Preços Novos', 'Economia Atual'],
                        [df['ano finalizacao'].sort_values().unique()[0],
@@ -500,7 +500,7 @@ elif paginaSelecionada == 'Análise Exploratória':
 
     #Formatação moeda
     import locale
-    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
     #Confecção tabela
     data_matrix1 = [['Região', 'Processos', 'Preços Novos', 'Economia Atual'],
@@ -528,7 +528,7 @@ elif paginaSelecionada == 'Análise Exploratória':
     import locale
     import plotly.figure_factory as ff
 
-    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
     data_matrix6 = [['UF', 'Processos', 'Preços Novos', 'Economia Atual'],
                     [df.uf.sort_values().unique()[0], df.groupby('uf').processo.nunique()[0],
@@ -621,7 +621,7 @@ elif paginaSelecionada == 'Análise Exploratória':
     #Formatação moeda
     import locale
 
-    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
     #Confecção tabela
     data_matrix3 = [['Tipo', 'Processos', 'Preços Novos', 'Economia Atual'],
@@ -667,7 +667,7 @@ elif paginaSelecionada == 'Análise Exploratória':
     #Formatação moeda
     import locale
 
-    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+    locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
     #Confecção tabela
     data_matrix = [['Analista', 'Processos', 'Preços Novos', 'Economia Atual'],
